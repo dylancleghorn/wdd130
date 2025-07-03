@@ -25,9 +25,11 @@ header {
 h1 {
     color: #000;
     margin: 0 0 10px 0;
+    text-align: center;
 }
 
 h2 {
+    text-align: center;
     color: #000;
     margin: 0 0 10px 0;
 }
