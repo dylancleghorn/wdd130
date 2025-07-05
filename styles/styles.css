@@ -1,3 +1,9 @@
+:root {
+    --dark-bg-color: #333;
+    --light-bg-color: #fff;
+    --header-color: #000
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +14,7 @@
 body {
 
     line-height: 1.6;
-    color: #333;
+    color: var(--dark-bg-color);
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -23,14 +29,20 @@ header {
 }
 
 h1 {
-    color: #000;
+    color: var(--header-color);
     margin: 0 0 10px 0;
     text-align: center;
 }
 
 h2 {
     text-align: center;
-    color: #000;
+    color: var(--header-color);
+    margin: 0 0 10px 0;
+}
+
+h3 {
+    text-align: center;
+    color: var(--header-color);
     margin: 0 0 10px 0;
 }
 
@@ -48,8 +60,8 @@ nav a {
     margin: 0 10px;
     padding: 8px 15px;
     text-decoration: none;
-    color: white;
-    background-color: #000;
+    color: var(--light-bg-color);
+    background-color: var(--header-color);
     border-radius: 4px;
     transition: background-color 0.3s;
 }
@@ -59,7 +71,7 @@ nav a:hover {
 }
 
 main {
-    background-color: white;
+    background-color: var(--light-bg-color);
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -79,19 +91,19 @@ main img {
 aside {
     width: auto;
     border: none;
-    background-color: white;
+    background-color: var(--light-bg-color);
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border: 2px #aaa dashed;
     margin: 15px 0 15px 0;
-    color: #333;
+    color: --dark-bg-color;
 }
 
 aside img {
     width: 200px;
     height: auto;
-    border: 1px #000 solid
+    border: 1px var(--header-color) solid
 }
 
 .content-section {
@@ -104,7 +116,7 @@ aside img {
 footer {
     text-align: center;
     padding: 20px;
-    border-top: 2px solid #000;
+    border-top: 2px solid var(--header-color);
     margin-top: 30px;
 }
 
