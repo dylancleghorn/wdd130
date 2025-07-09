@@ -14,10 +14,13 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: var(--font-body);
+}
+
 body {
     margin: auto;
     max-width: 1080px;
-    font-family: var(--font-body);
     color: var(--color-primary);
     background-color: #fff;
 }
@@ -41,6 +44,12 @@ a {
     color: var(--color-accent-1);
 }
 
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 100%;
+}
+
 a:hover {
     color: var(--color-accent-2);
 }
@@ -49,12 +58,9 @@ header img {
     float: left
 }
 
-main {
-    clear: both
-}
-
 header nav {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 header nav a {
@@ -69,10 +75,8 @@ header nav a {
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease;
     height: 125px;
-}
-
-img.client {
-    float: right;
+    margin-left: 2px;
+    position: relative;
 }
 
 header nav a:hover,
@@ -82,13 +86,30 @@ header nav a:focus {
     cursor: pointer;
 }
 
-main section {
-    margin: 1rem
+nav a.active::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/raft-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+main {
+    clear: both
+}
+
+img.client {
+    float: right;
 }
 
 .hero {
     position: relative;
-    height: 400px;
+    height: min(400px, 50vh);
     background-image: url('../images/hero1.jpg');
     background-size: cover;
     background-position: center;
@@ -110,6 +131,7 @@ main section {
     z-index: 1;
     color: white;
     text-align: center;
+    border-radius: 5px;
 }
 
 .hero h1 {
@@ -128,27 +150,148 @@ main section {
     top: 150px;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 800px;
+    width: 90%;
+    max-width: 600px;
     padding: 1rem;
     font-family: var(--font-body);
     background-color: var(--color-primary);
-    position: absolute;
+    z-index: 1;
+    color: white;
 }
 
 .hero article p {
-    padding: 1rem 11rem 1rem 1rem;
+    padding: 1rem 10rem 1rem 1rem;
     font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+section {
+    margin: 1.5rem 0 2.5rem;
+}
+
+section h2 {
+    text-align: center;
+}
+
+.history {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 1rem;
+    width: 90%;
+    margin: auto;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+.history>div {
+    padding: 0 1rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.history p {
+    margin: 1rem 0;
+}
+
+.history img {
+    max-width: 400px;
+    width: 100%;
+}
+
+.adventures {
+    padding: 0 2rem;
+}
+
+.adventures h2 {
+    text-align: center;
+}
+
+.adventures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    align-items: start;
+    text-align: center;
+}
+
+.adventures figure {
+    margin: 0;
+}
+
+.adventures img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.adventures figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
 footer {
-    text-align: center;
+    border-top: var(--color-primary) solid 1px;
     padding: 2rem;
+    position: relative;
+    text-align: center;
 }
 
 footer p {
-    margin-bottom: 1rem;
+    margin: 0;
+    font-size: 1rem;
 }
 
-.socialmedia a {
-    text-decoration: none;
+.socialmedia {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.socialmedia a img {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    .history {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .history>div {
+        padding: 0.5rem;
+    }
+
+    .history img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .socialmedia {
+        position: static;
+        transform: none;
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    .hero article {
+        top: 120px;
+        font-size: 0.95rem;
+        padding: 0.75rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    .history {
+        padding: 0 1rem;
+    }
 }
