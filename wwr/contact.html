@@ -65,7 +65,7 @@
 
         <section>
             <h2>Send Us a Message</h2>
-            <form action="submit-form.html" method="post">
+            <form>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -74,21 +74,31 @@
 
                 <fieldset>
                     <legend>Purpose of Message:</legend>
-                    <label><input type="radio" name="purpose" value="general" required> General Inquiry</label><br>
-                    <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label><br>
-                    <label><input type="radio" name="purpose" value="website"> Website Suggestion</label>
+                    <label for="purpose-general">
+                        <input type="radio" id="purpose-general" name="purpose" value="general" required>
+                        General Inquiry
+                    </label><br>
+                    <label for="purpose-reservation">
+                        <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
+                        Reservation Question
+                    </label><br>
+                    <label for="purpose-website">
+                        <input type="radio" id="purpose-website" name="purpose" value="website">
+                        Website Suggestion
+                    </label>
                 </fieldset>
 
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
 
-                <label>
-                    <input type="checkbox" name="subscribe">
+                <label for="subscribe">
+                    <input type="checkbox" id="subscribe" name="subscribe">
                     Please subscribe me to the monthly newsletter
                 </label>
 
-                <button type="submit">Submit Your Message</button>
+                <button type="submit" id="submit">Submit Your Message</button>
             </form>
+
         </section>
     </main>
 
