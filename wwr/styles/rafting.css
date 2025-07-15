@@ -289,27 +289,29 @@ main>h1 {
     font-size: 1.1rem;
     line-height: 1.6;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    text-align: center;
 }
 
 .company-info p {
     margin: 0.75rem 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .company-info p::before {
-    content: "📍";
+    content: "✉️";
     margin-right: 0.75rem;
     font-size: 1.2rem;
 }
 
 .company-info p:nth-child(2)::before {
-    content: "📞";
+    content: "📍";
 }
 
 .company-info p:nth-child(3)::before {
-    content: "✉️";
+    content: "📞";
 }
 
 form {
@@ -321,9 +323,9 @@ form {
     margin: 2rem auto;
     padding: 1rem;
     background-color: var(--color-secondary);
-    border: 2px solid var(--color-primary);
+    border-left: 6px solid rgb(255 183 3);
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 form label {
@@ -374,8 +376,8 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-    background-color: var(--color-accent-2);
-    color: #fff;
+    filter: brightness(95%);
+
 }
 
 .employees {
