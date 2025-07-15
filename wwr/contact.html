@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Dylan Cleghorn">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Whitewater Rafting to learn more about our thrilling river adventures or to inquire about reservations.">
+    <title>Whitewater Rafting | Contact Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aptos+Serif&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/logo-blue.png" alt="Whitewater Rafting Logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">My Trips</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero small">
+            <h1>Contact Us</h1>
+        </div>
+
+        <section class="company-info">
+            <h2>Company Information</h2>
+            <p>123 River Run Rd, Rapidsville, CO 81401</p>
+            <p>(800) 555-RAFT (7238)</p>
+            <p>contact@whitewaterrafting.com</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0193028821866!2d-122.41941558468352!3d37.77492977975912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c2f9c7ef3%3A0x1c8b1ee34b41c4e9!2sSan%20Francisco%20City%20Hall!5e0!3m2!1sen!2sus!4v1618375988480!5m2!1sen!2sus"
+                height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+        <section>
+            <h2>Meet Our Team</h2>
+            <div class="employees">
+                <figure>
+                    <img src="images/sarah.jpg" alt="Smiling employee named Sarah">
+                    <figcaption>Sarah - Guest Services Manager</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/mike.jpg" alt="Smiling employee named Mike">
+                    <figcaption>Mike - Senior Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/ava.jpg" alt="Smiling employee named Ava">
+                    <figcaption>Ava - Reservations Coordinator</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>Send Us a Message</h2>
+            <form action="submit-form.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <fieldset>
+                    <legend>Purpose of Message:</legend>
+                    <label><input type="radio" name="purpose" value="general" required> General Inquiry</label><br>
+                    <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label><br>
+                    <label><input type="radio" name="purpose" value="website"> Website Suggestion</label>
+                </fieldset>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <label>
+                    <input type="checkbox" name="subscribe">
+                    Please subscribe me to the monthly newsletter
+                </label>
+
+                <button type="submit">Submit Your Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 | Whitewater Rafting | Dylan Cleghorn</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="Facebook Icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="Twitter/X Icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="Instagram Icon">
+            </a>
+        </nav>
+        <p><a href="images/contact-wireframe.png" target="_blank">View Contact Page Wireframe</a></p>
+    </footer>
+</body>
+
+</html>
