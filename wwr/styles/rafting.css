@@ -570,6 +570,10 @@ footer p a:hover {
         min-width: 5rem;
     }
 
+    .section-grid {
+        grid-template-columns: 1fr;
+
+    }
 }
 
 @media (max-width: 500px) {
